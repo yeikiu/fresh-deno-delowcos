@@ -29,12 +29,12 @@ const Home = () => {
       
       <main class="-mt-12 sm:mt-0 sm:ml-24 text-gray-200">
 
-        <HeroBackground bgImgUrl={asset('bg1.jpeg')}>
+        <HeroBackground bgImgUrl={asset('img/bg1.jpeg')}>
           <section id="inicio">
             <div class="flex h-screen">
               <div class="m-auto text-center">
 
-                <img src={asset('dlc_big.png')} class="mx-auto w-1/2" />
+                <img src={asset('img/dlc_big.png')} class="mx-auto w-1/2" />
 
                 <div class="my-6 h-px w-3/4 sm:w-1/2 mx-auto bg-white"></div>
 
@@ -52,7 +52,7 @@ const Home = () => {
           />
         </HeroBackground>
 
-        <HeroBackground bgImgUrl={asset('bg2.jpeg')}>
+        <HeroBackground bgImgUrl={asset('img/bg2.jpeg')}>
           <section id="instalaciones">
             <div class="flex h-screen">
               <div class="m-auto text-center w-3/4 sm:w-1/2">
@@ -80,7 +80,7 @@ const Home = () => {
           />
         </HeroBackground>
       
-        <HeroBackground bgImgUrl={asset('bg3.jpeg')}>
+        <HeroBackground bgImgUrl={asset('img/bg3.jpeg')}>
           <section id="servicios">
             <div class="flex h-screen">
               <div class="m-auto text-center w-3/4 sm:w-1/2">
@@ -107,7 +107,7 @@ const Home = () => {
           />
         </HeroBackground>
 
-        <HeroBackground bgImgUrl={asset('bg4.jpeg')}>
+        <HeroBackground bgImgUrl={asset('img/bg4.jpeg')}>
           <section id="contacto">
             <div class="flex h-screen">
               <div class="m-auto text-center w-3/4">

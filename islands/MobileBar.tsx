@@ -16,7 +16,7 @@ interface MobileBarProps {
 }
 
 export default function MobileBar({
-  logoPath = 'logo.png',
+  logoPath = 'img/logo.png',
   navBgColor = 'black',
   toggleBgColor = 'gray-500',
   toggleIconColor = 'red-500',

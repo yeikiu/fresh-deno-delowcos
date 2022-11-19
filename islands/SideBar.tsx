@@ -13,7 +13,7 @@ interface SideBarProps {
 }
 
 const SideBar = ({
-  logoPath = "logo.png",
+  logoPath = "img/logo.png",
   navBgColor = "black",
   menuItemsBgColor = "gray-100",
   menuItemsBgColorHover = "gray-700",
