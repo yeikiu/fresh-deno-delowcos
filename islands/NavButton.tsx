@@ -8,8 +8,12 @@ interface NavButtonProps {
 }
 
 const isElementVisible = (elem: HTMLElement) => {
-    return elem?.getBoundingClientRect().y > -1 * elem.offsetHeight + elem.offsetHeight/2 &&
-           elem?.getBoundingClientRect().y < elem.offsetHeight - elem.offsetHeight/2;
+    const { offsetHeight } = elem;
+    const halfOffsetHeight = offsetHeight/2;
+    
+    const { y } = elem.getBoundingClientRect();
+    
+    return y > -1 * offsetHeight + halfOffsetHeight && y < offsetHeight - halfOffsetHeight;
 }
 
 export default function NavButton ({ arrowDirection, parentId, targetId }: NavButtonProps) {
