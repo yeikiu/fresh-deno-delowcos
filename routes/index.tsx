@@ -3,6 +3,7 @@ import { asset } from "$fresh/runtime.ts";
 import HeroBackground from "../components/HeroBackground.tsx";
 import Layout from "../components/Layout.tsx";
 import ServicesList from "../components/ServicesList.tsx";
+import Footer from "../components/Footer.tsx";
 import MobileBar from "../islands/MobileBar.tsx";
 import NavButton from "../islands/NavButton.tsx";
 import SideBar from "../islands/SideBar.tsx";
@@ -201,8 +202,9 @@ const Home = () => {
             targetId="inicio"
           />
         </HeroBackground>
-      
       </main>
+
+      <Footer />
     </Layout>
   );
 }
