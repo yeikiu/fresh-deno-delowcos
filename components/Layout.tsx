@@ -21,7 +21,7 @@ const Layout = ({
 }: LayoutProps) => {
 
   return (
-    <div>
+    <>
       <Head>
         {metaTags.map(({ name, content }) => (
           <meta name={name} content={content}></meta>
@@ -32,7 +32,7 @@ const Layout = ({
         <title>{title}</title>
       </Head>
       {children}
-    </div>
+    </>
   );
 }
 
