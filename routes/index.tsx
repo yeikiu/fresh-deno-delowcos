@@ -33,7 +33,7 @@ const Home = () => {
           <section id="inicio">
             <div class="flex h-screen">
               <div class="m-auto text-center">
-
+                <a href="https://calendly.com/delowcos/reservar-sesion" target="_blank"><button class="p-4 text-xl sm:text-2xl bg-orange hover:bg-white text-white font-bold border-4 border-white hover:border-orange hover:text-orange rounded">RESERVAR SESIÓN</button></a>
                 <img src={asset('img/dlc_big.png')} class="mx-auto w-1/2" />
 
                 <div class="my-6 h-px w-3/4 sm:w-1/2 mx-auto bg-white"></div>
@@ -115,7 +115,7 @@ const Home = () => {
                 
                 <div class="my-6 h-px w-3/4 sm:w-1/2 mx-auto bg-white"></div>
 
-                <h3 class="text-2xl sm:text-3xl">
+                <h3 class="text-xl sm:text-2xl">
                   ¿Hablamos de tu próximo tema?
                   <br />
                   <br />
@@ -123,7 +123,7 @@ const Home = () => {
                   <span class="font-bold">
                     teléfono, e-mail,{" "}
                     <span class="text-green-400">WhatsApp</span> o{" "}
-                    <span class="text-purple-400">Instagram</span>
+                    <span class="text-purple-400">Instagram</span>.
                   </span>
                 </h3>
 
@@ -192,6 +192,15 @@ const Home = () => {
                     </svg>
                   </a>
                 </div>
+
+                <div class="mt-12 h-px w-5/6 sm:w-3/4 mx-auto bg-white"></div>
+                  <br />
+                  <br />
+                  <h3 class="text-xl sm:text-2xl">
+                  ¿Lo tienes todo claro? Si quieres pre-reservar tu sesión de grabación/mezcla, haz click en el siguiente botón para completar nuestro <a class="
+                  text-orange hover:text-underline" href="https://calendly.com/delowcos/reservar-sesion" target="_blank">formulario de reservas.</a>
+                  </h3>
+                  <a href="https://calendly.com/delowcos/reservar-sesion" target="_blank"><button class="mt-12 p-4 text-xl sm:text-2xl bg-orange hover:bg-white text-white font-bold border-4 border-white hover:border-orange hover:text-orange rounded">RESERVAR SESIÓN</button></a>
               </div>
             </div>
           </section>
