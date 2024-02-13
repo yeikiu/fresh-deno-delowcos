@@ -111,6 +111,21 @@ export default function VerticalCarousel() {
       });
     });
 
+    /* Optional Javascript to close the radio button version by clicking it again */
+    const myRadios = document.getElementsByName('acc-radio');
+    let setCheck;
+    let x = 0;
+    for(x = 0; x < myRadios.length; x++) {
+        myRadios[x].onclick = function() {
+            if(setCheck != this){
+                 setCheck = this;
+            }else{
+                this.checked = false;
+                setCheck = null;
+        }
+        };
+    }
+
     gotoSection(0, 1);
   }, []);
 
