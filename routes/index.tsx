@@ -110,7 +110,7 @@ export default function Home() {
         bgUrl={asset("img/bg3.jpeg")}
       >
         <div class="flex h-screen overflow-y-scroll">
-          <div class="m-auto text-center text-3xl md:text-5xl lg:text-7xl p-10 drop-shadow-xl">
+          <div class="m-auto text-center text-2xl md:text-5xl lg:text-7xl p-10 drop-shadow-xl">
             Cabina insonorizada · Estudio climatizado · Zona de reuniones · Set
             fotografías/rodajes
           </div>
