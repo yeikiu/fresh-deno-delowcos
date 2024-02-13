@@ -20,12 +20,20 @@ export default function VerticalCarousel() {
     let animating = false
     function gotoSection(index: number, direction: number) {
       if (animating) return
-      index = wrap(index, sections.length);
       animating = true;
+
+      index = wrap(index, sections.length);
+      navs[currentIndex]?.classList.remove('active')
+      navs[index]?.classList.add('active');
 
       const fromTop = direction === -1;
       const dFactor = fromTop ? -1 : 1;
-      const tl = gsap.timeline({ defaults: { duration: 1.25, ease: "power1.inOut" }, onComplete: () => { animating = false }});
+      const tl = gsap.timeline({ defaults: { duration: 1.25, ease: "power1.inOut" }, onComplete: () => {
+        currentIndex = index;
+        currentPageId.value = sections[index].id
+        
+        animating = false; 
+      }});
 
       if (currentIndex >= 0) {
         gsap.set(sections[currentIndex], { zIndex: 0 });
@@ -43,14 +51,10 @@ export default function VerticalCarousel() {
           ease: "power2",
           stagger: { each: 0.02, from: "random" },
         }, 0.2);
-
-      navs[currentIndex]?.classList.remove('active')
-      currentIndex = index;
-      currentPageId.value = sections[index].id
-      navs[currentIndex]?.classList.add('active')
     }
 
     function navigateSectionById(id: string) {
+      if (animating) return
       const index = Array.from(sections).findIndex(section => section.id === id);
 
       if (index !== -1 && index !== currentIndex) {
@@ -58,22 +62,25 @@ export default function VerticalCarousel() {
       }
     }
 
-    let lastTap = 0;
-    document.addEventListener("touchend", function (event) {
-      const currentTime = new Date().getTime();
-      const tapLength = currentTime - lastTap;
-      if (tapLength < 500 && tapLength > 0) {
-        gotoSection(currentIndex + 1, 1);
-        event.preventDefault();
-      }
-      lastTap = currentTime;
-    });
-
-    globalThis.addEventListener("wheel", (event) => {
-      if (event.deltaY < 0 && !animating) {
-        gotoSection(currentIndex - 1, -1);
-      } else if (event.deltaY > 0 && !animating) {
-        gotoSection(currentIndex + 1, 1);
+    document.querySelectorAll(".content").forEach(a => {
+      if (a.firstElementChild && a.scrollHeight < a.firstElementChild.scrollHeight) {
+        a.firstElementChild.addEventListener("scroll", e => {
+          e.preventDefault();
+          if (a?.firstElementChild?.scrollHeight === Math.ceil((a?.firstElementChild?.clientHeight ?? 0) + (a?.firstElementChild?.scrollTop ?? 0))) {
+            gotoSection(currentIndex + 1, 1);
+          } else if ((a?.firstElementChild?.scrollTop ?? 0) === 0) {
+            gotoSection(currentIndex - 1, -1);
+          }
+        });
+      } else {
+        a.firstChild?.addEventListener("wheel", (event) => {
+          event.preventDefault();
+          if (event.deltaY < 0 && !animating) {
+            gotoSection(currentIndex - 1, -1);
+          } else if (event.deltaY > 0 && !animating) {
+            gotoSection(currentIndex + 1, 1);
+          }
+        }); 
       }
     });
 

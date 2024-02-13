@@ -16,7 +16,7 @@ export function Section({ id, title, className, bgUrl, children }: {
             style={{ backgroundImage: `url(${bgUrl});` }}
           >
             <h2 className="section-title">{title}</h2>
-            <div class="absolute h-screen w-full">
+            <div class="content absolute h-screen w-full">
               {children}
             </div>
           </div>

@@ -20,7 +20,7 @@ export default function Home() {
         className="first"
         bgUrl={asset("img/bg1.jpeg")}
       >
-        <div class="flex h-screen p-8">
+        <div class="flex h-screen overflow-y-scroll p-8">
           <div class="m-auto text-center">
             <a
               href="https://calendly.com/delowcos/reservar-sesion"
@@ -49,7 +49,7 @@ export default function Home() {
         className="second"
         bgUrl={asset("img/bg2.jpeg")}
       >
-        <div class="flex h-screen">
+        <div class="flex h-screen pt-32 overflow-y-scroll">
           <div class="m-auto text-center">
             <div class="justify-center p-10 space-y-2">
               <p class="border border-4 p-2 bg-black opacity-75">
@@ -109,7 +109,7 @@ export default function Home() {
         className="third"
         bgUrl={asset("img/bg3.jpeg")}
       >
-        <div class="flex h-screen">
+        <div class="flex h-screen overflow-y-scroll">
           <div class="m-auto text-center text-3xl md:text-5xl lg:text-7xl p-10 drop-shadow-xl">
             Cabina insonorizada · Estudio climatizado · Zona de reuniones · Set
             fotografías/rodajes
@@ -122,7 +122,7 @@ export default function Home() {
         className="fourth"
         bgUrl={asset("img/bg4.jpeg")}
       >
-        <div class="flex h-screen">
+        <div class="flex h-screen pt-32 overflow-y-scroll">
           <div class="m-auto text-center md:w-3/4 bg-black/90 p-10 md:p-20">
             <h1 class="text-4xl md:text-5xl font-light italic">"Sólo el miedo se interpone entre el éxito y tus manos"</h1>
 
