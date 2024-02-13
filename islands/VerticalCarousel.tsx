@@ -19,6 +19,7 @@ export default function VerticalCarousel() {
 
     let animating = false
     function gotoSection(index: number, direction: number) {
+      // console.log({index, direction})
       if (animating) return
       animating = true;
 
@@ -62,7 +63,26 @@ export default function VerticalCarousel() {
       }
     }
 
-    document.querySelectorAll(".content").forEach(a => {
+    /* let lastTap = 0;
+    document.addEventListener("touchend", function (event) {
+      const currentTime = new Date().getTime();
+      const tapLength = currentTime - lastTap;
+      if (tapLength < 500 && tapLength > 0) {
+        gotoSection(currentIndex + 1, 1);
+        event.preventDefault();
+      }
+      lastTap = currentTime;
+    }); */
+
+    /* globalThis.addEventListener("wheel", (event) => {
+      if (event.deltaY < 0 && !animating) {
+        gotoSection(currentIndex - 1, -1);
+      } else if (event.deltaY > 0 && !animating) {
+        gotoSection(currentIndex + 1, 1);
+      }
+    }); */
+
+    /* document.querySelectorAll(".content").forEach(a => {
       if (a.firstElementChild && a.scrollHeight < a.firstElementChild.scrollHeight) {
         a.firstElementChild.addEventListener("scroll", e => {
           e.preventDefault();
@@ -82,7 +102,7 @@ export default function VerticalCarousel() {
           }
         }); 
       }
-    });
+    }); */
 
     document.querySelectorAll("nav a").forEach(a => {
       a.addEventListener("click", e => {

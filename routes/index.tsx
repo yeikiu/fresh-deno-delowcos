@@ -20,7 +20,7 @@ export default function Home() {
         className="first"
         bgUrl={asset("img/bg1.jpeg")}
       >
-        <div class="flex h-screen overflow-y-scroll p-8">
+        <div class="flex h-screen overflow-y-scroll p-8 mt-1">
           <div class="m-auto text-center">
             <a
               href="https://calendly.com/delowcos/reservar-sesion"
