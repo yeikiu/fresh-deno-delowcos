@@ -51,36 +51,55 @@ export default function Home() {
         bgUrl={asset("img/bg2.jpeg")}
       >
         <div class="flex h-screen pt-32 overflow-y-scroll">
-          <div class="m-auto text-center w-full md:w-3/5 p-8">
-            <div class="bg-black opacity-90 shadow-md">
-              <Accordion
-                allowMultipleOpen={false}
-                contentList={[{
-                  id: 'acc-1',
-                  title: 'Producción musical DeLowCos · 60€',
-                  content: `Sesiones de hasta 4 horas con nuestro productor residente en horario de mañana o tarde. Ideal para amateurs que empiezan a subir música a canales oficiales.`
-                }, {
-                  id: 'acc-2',
-                  title: 'Producción musical PRO con @srkokis · 120€',
-                  content: `Sube de nivel y descubre por qué los mejores suenan como suenan. @srkokis es un productor canario consagrado. Su experiencia y su trato marcan la diferencia.`
-                }, {
-                  id: 'acc-3',
-                  title: 'Creación contenido redes · 30€',
-                  content: `Trabaja con nuestro productor durante sesiones de hasta dos horas para que tus reels y Tik-Toks suenen como nunca antes.`
-                }, {
-                  id: 'acc-4',
-                  title: 'Alquiler cabina grabación · 40€',
-                  content: `Trae tu propio productor y haz uso de nuestras instalaciones. Hasta 4 horas/sesión.`
-                }, {
-                  id: 'acc-5',
-                  title: 'Alquiler estudio completo · 80€',
-                  content: `Ideal para videoclips con nuestros fondos y materiales de iluminación. Hasta 4 horas/sesión.`
-                }, {
-                  id: 'acc-6',
-                  title: 'Sesión fotos DeLowCos · 50€',
-                  content: `Siempre útil ante campañas de lanzamiento. Se entregarán 10 fotos seleccionadas por el cliente con la edición final.`
-                }]}
-              />
+          <div class="m-auto text-center">
+            <div class="justify-center p-10 space-y-2">
+              <p class="border border-4 p-2 bg-black opacity-75">
+                <span class="font-bold text-xl">Producción LowCos · 60€</span>
+                <br />
+                <span class="text-xs">(Hasta 4 horas/sesión)</span>
+              </p>
+              <p class="border border-4 p-2 bg-black opacity-75">
+                <span class="font-bold text-xl">
+                  Sesión PRO con @srkokis · 120€
+                </span>
+                <br />
+                <span class="text-xs">(Hasta 4 horas/sesión)</span>
+              </p>
+              <p class="border border-4 p-2 bg-black opacity-75">
+                <span class="font-bold text-xl">
+                  Contenido redes LowCos · 30€
+                </span>
+                <br />
+                <span class="text-xs">(Hasta 2 horas/sesión)</span>
+              </p>
+              <p class="border border-4 p-2 bg-black opacity-75">
+                <span class="font-bold text-xl">
+                  Alquiler cabina grabación · 40€
+                </span>
+                <br />
+                <span class="text-xs">
+                  (Trae tu propio productor · Hasta 4 horas/sesión)
+                </span>
+              </p>
+              <p class="border border-4 p-2 bg-black opacity-75">
+                <span class="font-bold text-xl">
+                  Alquiler estudio completo · 80€
+                </span>
+                <br />
+                <span class="text-xs">
+                  (Ideal para videoclips · Hasta 4 horas/sesión)
+                </span>
+              </p>
+              <p class="border border-4 p-2 bg-black opacity-75">
+                <span class="font-bold text-xl">
+                  Sesión de fotos LowCos · 50€
+                </span>
+                <br />
+                <span class="text-xs">
+                  (Ideal para campañas de lanzamiento · Entrega de 10 fotos
+                  editas)
+                </span>
+              </p>
             </div>
           </div>
         </div>
