@@ -60,13 +60,6 @@ export default function Home() {
               </p>
               <p class="border border-4 p-2 bg-black opacity-75">
                 <span class="font-bold text-xl">
-                  Sesión PRO con @srkokis · 120€
-                </span>
-                <br />
-                <span class="text-xs">(Hasta 4 horas/sesión)</span>
-              </p>
-              <p class="border border-4 p-2 bg-black opacity-75">
-                <span class="font-bold text-xl">
                   Contenido redes LowCos · 30€
                 </span>
                 <br />
