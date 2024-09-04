@@ -24,11 +24,11 @@ export default function Home() {
         <div class="flex h-screen overflow-y-scroll p-8 mt-1">
           <div class="m-auto text-center">
             <a
-              href="https://calendly.com/delowcos/reservar-sesion"
+              href="https://cal.com/delowcos"
               target="_blank"
             >
               <button class="opacity-90 p-3 mb-6 text-xl sm:text-2xl bg-orange-400 hover:bg-white text-white font-bold border-4 border-white hover:border-orange-400 hover:text-orange-400 rounded">
-                RESERVAR SESIÓN
+                RESERVAR CITA
               </button>
             </a>
             <img
@@ -52,47 +52,140 @@ export default function Home() {
       >
         <div class="flex h-screen pt-32 overflow-y-scroll">
           <div class="m-auto text-center">
-            <div class="justify-center p-10 space-y-2">
-              <p class="border border-4 p-2 bg-black opacity-75">
-                <span class="font-bold text-xl">Producción LowCos · 60€</span>
-                <br />
-                <span class="text-xs">(Hasta 4 horas/sesión)</span>
-              </p>
-              <p class="border border-4 p-2 bg-black opacity-75">
-                <span class="font-bold text-xl">
-                  Contenido redes LowCos · 30€
-                </span>
-                <br />
-                <span class="text-xs">(Hasta 2 horas/sesión)</span>
-              </p>
-              <p class="border border-4 p-2 bg-black opacity-75">
-                <span class="font-bold text-xl">
-                  Alquiler cabina grabación · 40€
-                </span>
-                <br />
-                <span class="text-xs">
-                  (Trae tu propio productor · Hasta 4 horas/sesión)
-                </span>
-              </p>
-              <p class="border border-4 p-2 bg-black opacity-75">
-                <span class="font-bold text-xl">
-                  Alquiler estudio completo · 80€
-                </span>
-                <br />
-                <span class="text-xs">
-                  (Ideal para videoclips · Hasta 4 horas/sesión)
-                </span>
-              </p>
-              <p class="border border-4 p-2 bg-black opacity-75">
-                <span class="font-bold text-xl">
-                  Sesión de fotos LowCos · 50€
-                </span>
-                <br />
-                <span class="text-xs">
-                  (Ideal para campañas de lanzamiento · Entrega de 10 fotos
-                  editas)
-                </span>
-              </p>
+            <div class="container mx-auto px-4 my-12">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class=" text-center p-16 rounded card bg-black/75 border border-white">
+                  <h1 class="font-bold mb-2 text-xl">Producción LowCos</h1>
+                  <div class="flex items-center justify-center mb-8">
+                    <span class="text-2xl -mt-8">€</span>
+                    <span class="text-6xl">60</span>
+                    <span class="text-small">(miembros 45€)</span>
+                  </div>
+
+                  <div class="flex flex-col place-content-end">
+                    <hr class="mb-6" />
+                    <ul class="my-6">
+                      <li class="text-lg">Sesión de 4 horas</li>
+                      <li class="text-lg pt-1">
+                        <br />
+                      </li>
+                      <li class="text-lg pt-1">
+                        Grabación + Mezcla + Mastering
+                      </li>
+                      <li class="text-lg pt-1">
+                        <br />
+                      </li>
+                    </ul>
+
+                    <a
+                      href="https://cal.com/delowcos/reservar-produccion"
+                      target="_blank"
+                    >
+                      <button class="opacity-90 p-3 text-xl sm:text-2xl bg-orange-400 hover:bg-white text-white font-bold border-4 border-white hover:border-orange-400 hover:text-orange-400 rounded">
+                        RESERVAR SESIÓN
+                      </button>
+                    </a>
+                  </div>
+                </div>
+
+                <div class=" text-center p-16 rounded card bg-black/75 border border-white">
+                  <h1 class="font-bold mb-2 text-xl">
+                    Alquiler cabina grabación
+                  </h1>
+                  <div class="flex items-center justify-center mb-8">
+                    <span class="text-2xl -mt-8">€</span>
+                    <span class="text-6xl">40</span>
+                    <span class="text-small">(miembros 25€)</span>
+                  </div>
+
+                  <div class="flex flex-col place-content-end">
+                    <hr class="mb-6" />
+                    <ul class="my-6">
+                      <li class="text-lg">Sesión de 4 horas</li>
+                      <li class="text-lg pt-1">
+                        <br />
+                      </li>
+                      <li class="text-lg pt-1">Trae tu propio productor</li>
+                      <li class="text-lg pt-1">
+                        <br />
+                      </li>
+                    </ul>
+
+                    <a
+                      href="https://cal.com/delowcos/alquiler-sala-estudio"
+                      target="_blank"
+                    >
+                      <button class="opacity-90 p-3 text-xl sm:text-2xl bg-orange-400 hover:bg-white text-white font-bold border-4 border-white hover:border-orange-400 hover:text-orange-400 rounded">
+                        RESERVAR SALA
+                      </button>
+                    </a>
+                  </div>
+                </div>
+
+                <div class=" text-center p-16 rounded card bg-black/75 border border-white">
+                  <h1 class="font-bold mb-2 text-xl">Beatmaking</h1>
+                  <div class="flex items-center justify-center mb-8">
+                    <span class="text-2xl -mt-8">€</span>
+                    <span class="text-6xl">60</span>
+                    <span class="text-small">(miembros 50€)</span>
+                  </div>
+
+                  <div class="flex flex-col place-content-end">
+                    <hr class="mb-6" />
+                    <ul class="my-6">
+                      <li class="text-lg">Bajo encargo</li>
+                      <li class="text-lg pt-1">
+                        <br />
+                      </li>
+                      <li class="text-lg">Bases personalziadas</li>
+                      <li class="text-lg pt-1">
+                        <br />
+                      </li>
+                    </ul>
+
+                    <a
+                      href="https://cal.com/delowcos/reservar-beatmaking"
+                      target="_blank"
+                    >
+                      <button class="opacity-90 p-3 text-xl sm:text-2xl bg-orange-400 hover:bg-white text-white font-bold border-4 border-white hover:border-orange-400 hover:text-orange-400 rounded">
+                        RESERVAR CITA
+                      </button>
+                    </a>
+                  </div>
+                </div>
+
+                <div class=" text-center p-16 rounded card bg-black/75 border border-white">
+                  <h1 class="font-bold mb-2 text-xl">Sesión Fotos Lowkos</h1>
+                  <div class="flex items-center justify-center mb-8">
+                    <span class="text-2xl -mt-8">€</span>
+                    <span class="text-6xl">50</span>
+                    <span class="text-small">(miembros 40€)</span>
+                  </div>
+
+                  <div class="flex flex-col place-content-end">
+                    <hr class="mb-6" />
+                    <ul class="my-6">
+                      <li class="text-lg">Selección de 10 fotografías</li>
+                      <li class="text-lg pt-1">
+                        <br />
+                      </li>
+                      <li class="text-lg pt-1">Entrega tras edición</li>
+                      <li class="text-lg pt-1">
+                        <br />
+                      </li>
+                    </ul>
+
+                    <a
+                      href="https://cal.com/delowcos/sesion-fotografica-delowcos"
+                      target="_blank"
+                    >
+                      <button class="opacity-90 p-3 text-xl sm:text-2xl bg-orange-400 hover:bg-white text-white font-bold border-4 border-white hover:border-orange-400 hover:text-orange-400 rounded">
+                        RESERVAR SESIÓN
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -206,11 +299,11 @@ export default function Home() {
             </div>
             <div class="my-6 h-px w-3/4 md:w-1/2 mx-auto bg-white"></div>
             <a
-              href="https://calendly.com/delowcos/reservar-sesion"
+              href="https://cal.com/delowcos"
               target="_blank"
             >
               <button class="p-3 mb-6 text-xl sm:text-2xl bg-orange-400 hover:bg-white text-white font-bold border-4 border-white hover:border-orange-400 hover:text-orange-400 rounded">
-                RESERVAR SESIÓN
+                RESERVAR CITA
               </button>
             </a>
           </div>
