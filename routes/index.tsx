@@ -136,7 +136,7 @@ export default function Home() {
                       <li class="text-lg pt-1">
                         <br />
                       </li>
-                      <li class="text-lg">Bases personalziadas</li>
+                      <li class="text-lg">Bases personalizadas</li>
                       <li class="text-lg pt-1">
                         <br />
                       </li>
