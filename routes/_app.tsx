@@ -20,6 +20,8 @@ export default function App({ Component }: PageProps) {
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" />
       </head>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-5VZPFXY5MQ"></script>
+      <script src="ga.js"></script>
       <body>
         <Component />
       </body>
