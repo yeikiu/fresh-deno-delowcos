@@ -10,7 +10,8 @@ export default function Home() {
           <a href="#first">Inicio</a>
           <a href="#second">Servicios</a>
           <a href="#third">Instalaciones</a>
-          <a href="#fourth">Contacto</a>
+          <a href="#fourth">Membresía</a>
+          <a href="#fifth">Contacto</a>
         </nav>
       </header>
 
@@ -210,6 +211,58 @@ export default function Home() {
       >
         <div class="flex h-screen pt-32 overflow-y-scroll">
           <div class="m-auto text-center md:w-3/4 bg-black/90 p-10 md:p-20">
+            <h1 class="text-xl text-orange-300 md:text-5xl font-light italic underline">
+              Ventajas de hacerte miembro
+            </h1>
+            <br />
+            <ul class="mb-18 normal-case">
+              <li>
+              ✔️ Acceso libre a las instalaciones del estudio durante horario
+                de apertura
+              </li>
+              <br />
+              <li>✔️ Uso del material de audio, shooting e ilumincación</li>
+              <br />
+              <li>
+              ✔️ Descuentos en todos los servicios ofertados por el estudio
+              </li>
+            </ul>{" "}
+            <br />
+            <br />
+
+            <h1 class="text-xl text-orange-300 md:text-5xl font-light italic underline">
+              Cómo puedes hacerte miembro
+            </h1>{" "}
+            <br />
+            <div class="text-left normal-case px-10 md:px-30">
+              <p>
+                Dado que <strong class="underline">el número de miembros concurrentes es limitado</strong>, deberás
+                solicitar la membresía "in situ" en el estudio. Dónde
+                comprobaremos la disponibilidad de plazas y, presumiblemente, te
+                daremos de alta al instante. Existe una lista de espera a la que pueden optar aquellos
+                clientes que soliciten hacerse miembros durante períodos sin
+                cupo.
+              </p>
+              <br />
+              <p>
+              👉 Si tienes cualquier duda puedes contactarnos por <a class="font-bold underline" href="mailto:contacto@delowcos.com" target="_blank">e-mail</a> o <span class="text-purple-400 underline"> <a
+                href="https://www.instagram.com/delowcos.studio/"
+                target="_blank"
+              >DM en
+                instagram.</a></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </Section>
+      <Section
+        id="fifth"
+        title=""
+        className="fifth"
+        bgUrl={asset("img/bg5.jpeg")}
+      >
+        <div class="flex h-screen pt-32 overflow-y-scroll">
+          <div class="m-auto text-center md:w-3/4 bg-black/90 p-10 md:p-20">
             <h1 class="text-4xl md:text-5xl font-light italic">
               "Sólo el miedo se interpone entre el éxito y tus manos"
             </h1>
@@ -222,9 +275,7 @@ export default function Home() {
               <br />
               Puedes contactarnos vía{" "}
               <span class="font-bold">
-                e-mail o
-                {" "}
-                <span class="text-purple-400">Instagram</span>.
+                e-mail o <span class="text-purple-400">Instagram</span>.
               </span>
             </h3>
 
@@ -275,6 +326,7 @@ export default function Home() {
           </div>
         </div>
       </Section>
+
 
       <VerticalCarousel />
     </>
