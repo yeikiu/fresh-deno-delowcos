@@ -1,40 +1,43 @@
 import { useEffect } from "preact/hooks";
 import { signal } from "@preact/signals";
 
-export const currentPageId = signal('first')
+export const currentPageId = signal("first");
 
 export default function VerticalCarousel() {
   useEffect(() => {
-    const navs = Array.from(document.querySelectorAll("nav a"))
-    const sections = document.querySelectorAll(".section")
-    const images = document.querySelectorAll(".background")
-    const headings = document.querySelectorAll(".section-title")
-    const outerWrappers = document.querySelectorAll(".wrapper-outer")
-    const innerWrappers = document.querySelectorAll(".wrapper-inner")
-    let currentIndex = -1
-    const wrap = (index: number, max: number) => (index + max) % max
+    const navs = Array.from(document.querySelectorAll("nav a"));
+    const sections = document.querySelectorAll(".section");
+    const images = document.querySelectorAll(".background");
+    const headings = document.querySelectorAll(".section-title");
+    const outerWrappers = document.querySelectorAll(".wrapper-outer");
+    const innerWrappers = document.querySelectorAll(".wrapper-inner");
+    let currentIndex = -1;
+    const wrap = (index: number, max: number) => (index + max) % max;
 
-    gsap.set(outerWrappers, { yPercent: 100 })
-    gsap.set(innerWrappers, { yPercent: -100 })
+    gsap.set(outerWrappers, { yPercent: 100 });
+    gsap.set(innerWrappers, { yPercent: -100 });
 
-    let animating = false
+    let animating = false;
     function gotoSection(index: number, direction: number) {
       // console.log({index, direction})
-      if (animating) return
+      if (animating) return;
       animating = true;
 
       index = wrap(index, sections.length);
-      navs[currentIndex]?.classList.remove('active')
-      navs[index]?.classList.add('active');
+      navs[currentIndex]?.classList.remove("active");
+      navs[index]?.classList.add("active");
 
       const fromTop = direction === -1;
       const dFactor = fromTop ? -1 : 1;
-      const tl = gsap.timeline({ defaults: { duration: 1.25, ease: "power1.inOut" }, onComplete: () => {
-        currentIndex = index;
-        currentPageId.value = sections[index].id
-        
-        animating = false; 
-      }});
+      const tl = gsap.timeline({
+        defaults: { duration: 1.25, ease: "power1.inOut" },
+        onComplete: () => {
+          currentIndex = index;
+          currentPageId.value = sections[index].id;
+
+          animating = false;
+        },
+      });
 
       if (currentIndex >= 0) {
         gsap.set(sections[currentIndex], { zIndex: 0 });
@@ -43,7 +46,12 @@ export default function VerticalCarousel() {
       }
 
       gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
-      tl.fromTo([outerWrappers[index], innerWrappers[index]], { yPercent: (i: number) => (i ? -100 * dFactor : 100 * dFactor) }, { yPercent: 0 }, 0)
+      tl.fromTo(
+        [outerWrappers[index], innerWrappers[index]],
+        { yPercent: (i: number) => (i ? -100 * dFactor : 100 * dFactor) },
+        { yPercent: 0 },
+        0,
+      )
         .fromTo(images[index], { yPercent: 15 * dFactor }, { yPercent: 0 }, 0)
         .fromTo(headings[index], { autoAlpha: 0, yPercent: 150 * dFactor }, {
           autoAlpha: 1,
@@ -55,8 +63,10 @@ export default function VerticalCarousel() {
     }
 
     function navigateSectionById(id: string) {
-      if (animating) return
-      const index = Array.from(sections).findIndex(section => section.id === id);
+      if (animating) return;
+      const index = Array.from(sections).findIndex((section) =>
+        section.id === id
+      );
 
       if (index !== -1 && index !== currentIndex) {
         gotoSection(index, index > currentIndex ? 1 : -1);
@@ -100,30 +110,30 @@ export default function VerticalCarousel() {
           } else if (event.deltaY > 0 && !animating) {
             gotoSection(currentIndex + 1, 1);
           }
-        }); 
+        });
       }
     }); */
 
-    document.querySelectorAll("nav a").forEach(a => {
-      a.addEventListener("click", e => {
+    document.querySelectorAll("nav a").forEach((a) => {
+      a.addEventListener("click", (e) => {
         e.preventDefault();
         navigateSectionById(e.currentTarget.getAttribute("href").slice(1));
       });
     });
 
     /* Optional Javascript to close the radio button version by clicking it again */
-    const myRadios = document.getElementsByName('acc-radio');
+    const myRadios = document.getElementsByName("acc-radio");
     let setCheck;
     let x = 0;
-    for(x = 0; x < myRadios.length; x++) {
-        myRadios[x].onclick = function() {
-            if(setCheck != this){
-                 setCheck = this;
-            }else{
-                this.checked = false;
-                setCheck = null;
+    for (x = 0; x < myRadios.length; x++) {
+      myRadios[x].onclick = function () {
+        if (setCheck != this) {
+          setCheck = this;
+        } else {
+          this.checked = false;
+          setCheck = null;
         }
-        };
+      };
     }
 
     gotoSection(0, 1);
@@ -132,5 +142,5 @@ export default function VerticalCarousel() {
   return (
     <>
     </>
-  )
+  );
 }

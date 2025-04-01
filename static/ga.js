@@ -1,5 +1,7 @@
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+globalThis.dataLayer = globalThis.dataLayer ?? [];
+function gtag() {
+  dataLayer.push(arguments);
+}
+gtag("js", new Date());
 
-gtag('config', 'G-5VZPFXY5MQ');
+gtag("config", "G-5VZPFXY5MQ");

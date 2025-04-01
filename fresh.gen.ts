@@ -5,8 +5,9 @@
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $index from "./routes/index.tsx";
+import * as $InfoBanner from "./islands/InfoBanner.tsx";
 import * as $VerticalCarousel from "./islands/VerticalCarousel.tsx";
-import { type Manifest } from "$fresh/server.ts";
+import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
@@ -15,6 +16,7 @@ const manifest = {
     "./routes/index.tsx": $index,
   },
   islands: {
+    "./islands/InfoBanner.tsx": $InfoBanner,
     "./islands/VerticalCarousel.tsx": $VerticalCarousel,
   },
   baseUrl: import.meta.url,

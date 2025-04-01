@@ -1,11 +1,13 @@
 import { asset } from "$fresh/runtime.ts";
 import { Section } from "../components/Section.tsx";
+import InfoBanner from "../islands/InfoBanner.tsx";
 import VerticalCarousel from "../islands/VerticalCarousel.tsx";
 
 export default function Home() {
   return (
     <>
       <header class="w-full bg-black opacity-75">
+        <InfoBanner />
         <nav class="flex flex-wrap w-full justify-center p-6 gap-6">
           <a href="#first">Inicio</a>
           <a href="#second">Servicios</a>
@@ -27,7 +29,10 @@ export default function Home() {
               href="https://cal.com/delowcos"
               target="_blank"
             >
-              <button class="opacity-90 p-3 mb-6 text-xl sm:text-2xl bg-orange-400 hover:bg-white text-white font-bold border-4 border-white hover:border-orange-400 hover:text-orange-400 rounded">
+              <button
+                type="button"
+                class="opacity-90 p-3 mb-6 text-xl sm:text-2xl bg-orange-400 hover:bg-white text-white font-bold border-4 border-white hover:border-orange-400 hover:text-orange-400 rounded"
+              >
                 RESERVAR CITA
               </button>
             </a>
@@ -81,7 +86,10 @@ export default function Home() {
                       href="https://cal.com/delowcos/reservar-produccion"
                       target="_blank"
                     >
-                      <button class="opacity-90 p-3 text-xl sm:text-2xl bg-orange-400 hover:bg-white text-white font-bold border-4 border-white hover:border-orange-400 hover:text-orange-400 rounded">
+                      <button
+                        type="button"
+                        class="opacity-90 p-3 text-xl sm:text-2xl bg-orange-400 hover:bg-white text-white font-bold border-4 border-white hover:border-orange-400 hover:text-orange-400 rounded"
+                      >
                         RESERVAR SESIÓN
                       </button>
                     </a>
@@ -115,7 +123,10 @@ export default function Home() {
                       href="https://cal.com/delowcos/alquiler-sala-estudio"
                       target="_blank"
                     >
-                      <button class="opacity-90 p-3 text-xl sm:text-2xl bg-orange-400 hover:bg-white text-white font-bold border-4 border-white hover:border-orange-400 hover:text-orange-400 rounded">
+                      <button
+                        type="button"
+                        class="opacity-90 p-3 text-xl sm:text-2xl bg-orange-400 hover:bg-white text-white font-bold border-4 border-white hover:border-orange-400 hover:text-orange-400 rounded"
+                      >
                         RESERVAR SALA
                       </button>
                     </a>
@@ -147,7 +158,10 @@ export default function Home() {
                       href="https://cal.com/delowcos/reservar-beatmaking"
                       target="_blank"
                     >
-                      <button class="opacity-90 p-3 text-xl sm:text-2xl bg-orange-400 hover:bg-white text-white font-bold border-4 border-white hover:border-orange-400 hover:text-orange-400 rounded">
+                      <button
+                        type="button"
+                        class="opacity-90 p-3 text-xl sm:text-2xl bg-orange-400 hover:bg-white text-white font-bold border-4 border-white hover:border-orange-400 hover:text-orange-400 rounded"
+                      >
                         RESERVAR CITA
                       </button>
                     </a>
@@ -179,7 +193,10 @@ export default function Home() {
                       href="https://cal.com/delowcos/sesion-fotografica-delowcos"
                       target="_blank"
                     >
-                      <button class="opacity-90 p-3 text-xl sm:text-2xl bg-orange-400 hover:bg-white text-white font-bold border-4 border-white hover:border-orange-400 hover:text-orange-400 rounded">
+                      <button
+                        type="button"
+                        class="opacity-90 p-3 text-xl sm:text-2xl bg-orange-400 hover:bg-white text-white font-bold border-4 border-white hover:border-orange-400 hover:text-orange-400 rounded"
+                      >
                         RESERVAR SESIÓN
                       </button>
                     </a>
@@ -217,14 +234,14 @@ export default function Home() {
             <br />
             <ul class="mb-18 normal-case">
               <li>
-              ✔️ Acceso libre a las instalaciones del estudio durante horario
+                ✔️ Acceso libre a las instalaciones del estudio durante horario
                 de apertura
               </li>
               <br />
               <li>✔️ Uso del material de audio, shooting e ilumincación</li>
               <br />
               <li>
-              ✔️ Descuentos en todos los servicios ofertados por el estudio
+                ✔️ Descuentos en todos los servicios ofertados por el estudio
               </li>
             </ul>{" "}
             <br />
@@ -236,20 +253,34 @@ export default function Home() {
             <br />
             <div class="text-left normal-case px-10 md:px-30">
               <p>
-                Dado que <strong class="underline">el número de miembros concurrentes es limitado</strong>, deberás
-                solicitar la membresía "in situ" en el estudio. Dónde
-                comprobaremos la disponibilidad de plazas y, presumiblemente, te
-                daremos de alta al instante. Existe una lista de espera a la que pueden optar aquellos
-                clientes que soliciten hacerse miembros durante períodos sin
-                cupo.
+                Dado que{" "}
+                <strong class="underline">
+                  el número de miembros concurrentes es limitado
+                </strong>, deberás solicitar la membresía "in situ" en el
+                estudio. Dónde comprobaremos la disponibilidad de plazas y,
+                presumiblemente, te daremos de alta al instante. Existe una
+                lista de espera a la que pueden optar aquellos clientes que
+                soliciten hacerse miembros durante períodos sin cupo.
               </p>
               <br />
               <p>
-              👉 Si tienes cualquier duda puedes contactarnos por <a class="font-bold underline" href="mailto:contacto@delowcos.com" target="_blank">e-mail</a> o <span class="text-purple-400 underline"> <a
-                href="https://www.instagram.com/delowcos.studio/"
-                target="_blank"
-              >DM en
-                instagram.</a></span>
+                👉 Si tienes cualquier duda puedes contactarnos por{" "}
+                <a
+                  class="font-bold underline"
+                  href="mailto:contacto@delowcos.com"
+                  target="_blank"
+                >
+                  e-mail
+                </a>{" "}
+                o{" "}
+                <span class="text-purple-400 underline">
+                  <a
+                    href="https://www.instagram.com/delowcos.studio/"
+                    target="_blank"
+                  >
+                    DM en instagram.
+                  </a>
+                </span>
               </p>
             </div>
           </div>
@@ -280,7 +311,7 @@ export default function Home() {
             </h3>
 
             <div class="inline-grid grid-cols-2 gap-12 mt-12">
-              <a href="mailto:contacto@delowcos.com" target="_blank">
+              <a href="mailto:delowcos.studio@gmail.com" target="_blank">
                 <svg
                   class="h-8"
                   stroke="currentColor"
@@ -319,14 +350,16 @@ export default function Home() {
               href="https://cal.com/delowcos"
               target="_blank"
             >
-              <button class="p-3 mb-6 text-xl sm:text-2xl bg-orange-400 hover:bg-white text-white font-bold border-4 border-white hover:border-orange-400 hover:text-orange-400 rounded">
+              <button
+                type="button"
+                class="p-3 mb-6 text-xl sm:text-2xl bg-orange-400 hover:bg-white text-white font-bold border-4 border-white hover:border-orange-400 hover:text-orange-400 rounded"
+              >
                 RESERVAR CITA
               </button>
             </a>
           </div>
         </div>
       </Section>
-
 
       <VerticalCarousel />
     </>

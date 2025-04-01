@@ -5,7 +5,7 @@ export function Section({ id, title, className, bgUrl, children }: {
   title: string;
   className: string;
   bgUrl: string;
-  children?: ComponentChildren
+  children?: ComponentChildren;
 }) {
   return (
     <section id={id} className={`section ${className}`}>
