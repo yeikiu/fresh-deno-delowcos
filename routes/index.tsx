@@ -28,17 +28,6 @@ export default function Home() {
       >
         <div class="flex h-screen overflow-y-scroll p-8 mt-1">
           <div class="m-auto text-center">
-            <a
-              href="https://cal.com/delowcos"
-              target="_blank"
-            >
-              <button
-                type="button"
-                class="opacity-90 p-3 mb-6 text-xl sm:text-2xl bg-orange-400 hover:bg-white text-white font-bold border-4 border-white hover:border-orange-400 hover:text-orange-400 rounded"
-              >
-                RESERVAR CITA
-              </button>
-            </a>
             <img
               src={asset("img/dlc_big.png")}
               class="mx-auto w-1/2 opacity-90"
@@ -49,6 +38,18 @@ export default function Home() {
             <h3 class="sm:text-2xl text-lg font-light">
               Tu estudio de confianza en LPGC 🇮🇨
             </h3>
+
+            <a
+              href="https://cal.com/delowcos"
+              target="_blank"
+            >
+              <button
+                type="button"
+                class="opacity-90 p-3 mt-6 text-xl sm:text-2xl bg-orange-400 hover:bg-white text-white font-bold border-4 border-white hover:border-orange-400 hover:text-orange-400 rounded"
+              >
+                RESERVAR CITA
+              </button>
+            </a>
           </div>
         </div>p-4 sm:p-10
       </Section>

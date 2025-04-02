@@ -27,15 +27,15 @@ export default function InfoBanner() {
   return (
     <div
       id="infoBanner"
-      class="w-full text-center bg-blue-700 text-gray-200 p-4"
+      class="w-full bg-blue-700 text-gray-200 p-4"
     >
       <p
         onClick={hanldeBannerDismiss}
-        class="mx-8 px-2 float-right cursor-pointer hover:text-white border rounded-full"
+        class="mx-2 px-2 float-right cursor-pointer hover:text-white border rounded-full"
       >
         x
       </p>
-      <p>
+      <p class="text-xs lg:text-base text-center">
         ℹ️ Debido a{" "}
         <a
           class="text-white underline px-1"
