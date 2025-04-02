@@ -1,4 +1,4 @@
-import { asset } from "$fresh/runtime.ts";
+import { asset, Head } from "$fresh/runtime.ts";
 import { Section } from "../components/Section.tsx";
 import InfoBanner from "../islands/InfoBanner.tsx";
 import VerticalCarousel from "../islands/VerticalCarousel.tsx";
@@ -6,6 +6,9 @@ import VerticalCarousel from "../islands/VerticalCarousel.tsx";
 export default function Home() {
   return (
     <>
+      <Head>
+        <link rel="stylesheet" href={asset("global.css")} />
+      </Head>
       <header class="w-full bg-black opacity-75">
         <InfoBanner />
         <nav class="flex flex-wrap w-full justify-center p-6 gap-6">

@@ -1,4 +1,5 @@
 import { type PageProps } from "$fresh/server.ts";
+
 export default function App({ Component }: PageProps) {
   return (
     <html>
@@ -30,7 +31,8 @@ export default function App({ Component }: PageProps) {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
-        <link rel="stylesheet" href="/styles.css" />
+        {/* CHECK https://dev.to/asqit/replacing-twind-with-tailwind-in-fresh-1j4d */}
+        <link rel="stylesheet" href="/tailwind.css" />
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" />
       </head>
