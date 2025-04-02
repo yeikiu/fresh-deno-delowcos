@@ -47,7 +47,7 @@ export default function InfoBanner() {
         ajenos a nuestra voluntad, recomendamos mandar{" "}
         <a
           class="text-white underline px-1"
-          href="mailto:delowcos.studio@gmail.com?subject=Correo%20para%20evitar%20problemas%20con%20Google&body=Hola&#44;%20este%20es%20un%20correo%20para%20que%20ambas%20partes%20nos%20tengamos%20en%20la%20lista%20de%20direcciones%20y%20evitar%20que%20google%20marque%20las%20reservas%20como%20correo%20no%20deseado%20en%20el%20futuro."
+          href="mailto:delowcos.studio@gmail.com?subject=Correo%20para%20evitar%20problemas%20con%20Google&body=Hola&#44;%20este%20es%20un%20correo%20para%20que%20ambas%20partes%20nos%20tengamos%20en%20la%20lista%20de%20direcciones%20y%20evitar%20que%20Google%20marque%20las%20reservas%20como%20correo%20no%20deseado%20en%20el%20futuro."
         >
           un simple saludo por e-mail
         </a>{" "}
